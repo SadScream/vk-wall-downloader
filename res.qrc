@@ -1,0 +1,19 @@
+<RCC>
+  <qresource prefix="menu_icons">
+    <file>icons/save.png</file>
+    <file>icons/auth.png</file>
+    <file>icons/help.PNG</file>
+    <file>icons/settings.png</file>
+  </qresource>
+  <qresource prefix="app_icons">
+    <file>icons/cancel.png</file>
+    <file>icons/error.png</file>
+    <file>icons/go_back.png</file>
+    <file>icons/icon.png</file>
+    <file>icons/passed.png</file>
+    <file>icons/unvisib.png</file>
+    <file>icons/visib.png</file>
+    <file>icons/w256h2561339405709Add1256.png</file>
+    <file>icons/waiting.png</file>
+  </qresource>
+</RCC>
