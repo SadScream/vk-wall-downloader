@@ -11,13 +11,6 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 from . import res_rc
 
 
-
-'''
-unused
-'''
-
-
-
 class Ui_AuthWindow(QtWidgets.QDialog):
 
 	def __init__(self, vk_api):
