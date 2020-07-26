@@ -163,13 +163,19 @@ class App(QtWidgets.QMainWindow, Design.Ui_Main):
 		else:
 			pth = None
 
+		type_of_downloading = self.config.read("target_of_download")
+
 		if self.manual_button.isChecked():
 			domain = self.domain_text.text()
 
 			if len(domain):
 				print(f"[{self.start_downloading.__name__}] Preparing to download...")
 
-				thread = threading.Thread(target = self.downloader.download, args=(self.auth.vk, domain, count, offset, pth))
+				thread = threading.Thread(target=self.downloader.download, args=(
+								self.auth.vk, 
+								domain, count, 
+								offset, pth, 
+								type_of_downloading))
 
 				self.turn_widgets(False)
 
@@ -180,8 +186,12 @@ class App(QtWidgets.QMainWindow, Design.Ui_Main):
 			self.turn_widgets(False)
 			domains = self.config.read("domains")
 
-			for i, (domain, v) in enumerate(domains.items()):
-				self.threads.append(threading.Thread(target = self.downloader.download, args=(self.auth.vk, domain, count, offset, pth)))
+			for domain, _ in domains.items():
+				self.threads.append(threading.Thread(target = self.downloader.download, args=(
+								self.auth.vk, 
+								domain, count, 
+								offset, pth, 
+								type_of_downloading)))
 			
 			for thread in self.threads:
 				thread.start()

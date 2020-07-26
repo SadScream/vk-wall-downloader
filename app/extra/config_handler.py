@@ -13,6 +13,7 @@ class Config:
 			"save": True,
 			"remember": True,
 			"path_to": None,
+			"target_of_download": 0,
 		    "domains": {}
 			}
 
