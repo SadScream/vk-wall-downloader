@@ -11,9 +11,9 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 
 
 try:
-	from .inputDomain import Ui_InputDomain
+	from .InputDomain import Ui_InputDomain
 except:
-	from inputDomain import Ui_InputDomain
+	from InputDomain import Ui_InputDomain
 
 
 class InputWindow(Ui_InputDomain):

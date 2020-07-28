@@ -4,7 +4,8 @@ import vk_api
 import sys
 import os
 
-from extra import (Auth, config_handler, Design, Domain, download, ConfirmAuth, Settings)
+from extra import config_handler, download
+from gui import Auth, Design,Domain, ConfirmAuth, Settings
 
 
 class Authorization(Auth.Ui_Authorization):
